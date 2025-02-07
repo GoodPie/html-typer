@@ -1,5 +1,5 @@
 {
-  "name": "html-typer",
+  "name": "@goodpie/html-typer",
   "version": "1.0.0",
   "description": "Types out HTML into a view, supporting vanilla JS and React",
   "publishConfig": {
@@ -10,9 +10,9 @@
     "url": "git+https://github.com/GoodPie/html-typer"
   },
   "bugs": {
-    "url": "https://github.com/your-username/html-typer/issues"
+    "url": "https://github.com/goodpie/html-typer/issues"
   },
-  "homepage": "https://github.com/your-username/html-typer#readme",
+  "homepage": "https://github.com/goodpie/html-typer#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
