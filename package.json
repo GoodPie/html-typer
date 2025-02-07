@@ -5,6 +5,14 @@
   "publishConfig": {
     "access": "public"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GoodPie/html-typer"
+  },
+  "bugs": {
+    "url": "https://github.com/your-username/html-typer/issues"
+  },
+  "homepage": "https://github.com/your-username/html-typer#readme",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "exports": {
