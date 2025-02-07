@@ -1,17 +1,12 @@
 import React, {useRef, useEffect} from 'react';
 import {animateHtmlRendering} from './index';
+import {HTMLTyperProps} from "./HtmlTyperProps";
 
-export interface HTMLTyperProps {
-  html: string;
-  speed?: number;
-  className?: string;
-  style?: React.CSSProperties;
-}
 
 /**
  * HTMLTyper is a React component that renders HTML with a typewriter effect.
  */
-export const HTMLTyper: React.FC<HTMLTyperProps> = ({
+export const HtmlTyper: React.FC<HTMLTyperProps> = ({
                                                       html,
                                                       speed = 50,
                                                       className,
@@ -27,5 +22,3 @@ export const HTMLTyper: React.FC<HTMLTyperProps> = ({
 
   return <div ref={containerRef} className={className} style={style}/>;
 };
-
-export default HTMLTyper;

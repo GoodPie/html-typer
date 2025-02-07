@@ -1,6 +1,6 @@
 {
   "name": "@goodpie/html-typer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Types out HTML into a view, supporting vanilla JS and React",
   "publishConfig": {
     "access": "public"
@@ -13,22 +13,23 @@
     "url": "https://github.com/goodpie/html-typer/issues"
   },
   "homepage": "https://github.com/goodpie/html-typer#readme",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/index.js",
-      "require": "./dist/index.js"
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js"
     },
     "./react": {
-      "import": "./dist/react.js",
-      "require": "./dist/react.js"
+      "import": "./dist/react.esm.js",
+      "require": "./dist/react.cjs.js"
     }
   },
+  "types": "dist/index.d.ts",
   "scripts": {
     "test": "jest",
-    "build": "tsc",
-    "watch": "tsc --watch"
+    "build": "rollup -c",
+    "watch": "rollup -c --watch"
   },
   "keywords": [
     "typer",
@@ -43,6 +44,10 @@
     "typescript": "^5.7.3"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^28.0.2",
+    "@rollup/plugin-node-resolve": "^16.0.0",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.2",
     "@testing-library/jest-dom": "^6.6.3",
     "@testing-library/react": "^16.2.0",
     "@types/dompurify": "^3.2.0",
@@ -52,7 +57,9 @@
     "jest-environment-jsdom": "^29.7.0",
     "react": "*",
     "react-dom": "^19.0.0",
-    "ts-jest": "^29.2.5"
+    "rollup": "^2.79.2",
+    "ts-jest": "^29.2.5",
+    "tslib": "^2.8.1"
   },
   "peerDependencies": {
     "react": "^16.8.0"
