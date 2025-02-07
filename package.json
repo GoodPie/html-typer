@@ -1,6 +1,6 @@
 {
   "name": "@goodpie/html-typer",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Types out HTML into a view, supporting vanilla JS and React",
   "publishConfig": {
     "access": "public"
@@ -19,10 +19,6 @@
     ".": {
       "import": "./dist/index.esm.js",
       "require": "./dist/index.cjs.js"
-    },
-    "./react": {
-      "import": "./dist/react.esm.js",
-      "require": "./dist/react.cjs.js"
     }
   },
   "types": "dist/index.d.ts",
@@ -49,24 +45,12 @@
     "@rollup/plugin-terser": "^0.4.4",
     "@rollup/plugin-typescript": "^12.1.2",
     "@testing-library/jest-dom": "^6.6.3",
-    "@testing-library/react": "^16.2.0",
     "@types/dompurify": "^3.2.0",
     "@types/jest": "^29.5.14",
-    "@types/react": "^19.0.8",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
-    "react": "*",
-    "react-dom": "^19.0.0",
     "rollup": "^2.79.2",
     "ts-jest": "^29.2.5",
     "tslib": "^2.8.1"
-  },
-  "peerDependencies": {
-    "react": "^16.8.0"
-  },
-  "peerDependenciesMeta": {
-    "react": {
-      "optional": true
-    }
   }
 }
