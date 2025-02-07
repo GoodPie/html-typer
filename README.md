@@ -1,62 +1,67 @@
-# animate-html-rendering
+# HTML Typer
 
-Animate your HTML content with a smooth typewriter effect. This library gradually renders text and nested HTML elements while sanitizing the input using [DOMPurify](https://github.com/cure53/DOMPurify).
+**HTML Typer** is a lightweight TypeScript package that brings your HTML content to life with a smooth typewriter effect. It auto-sanitizes input using DOMPurify, supports nested elements, and even comes with a ready-to-use React component for seamless integration into dynamic UIs.
 
 ## Features
 
-- **Typewriter Effect:** Gradually animates text character by character.
-- **Nested HTML Support:** Handles nested elements and text nodes.
-- **Built-in Sanitization:** Uses DOMPurify to prevent XSS risks.
-- **TypeScript & JavaScript:** Written in TypeScript and compiled to JS for seamless integration.
+- **Typewriter Animation:** Gradually renders text for a captivating effect.
+- **Auto-Sanitization:** Uses DOMPurify to secure your content against XSS.
+- **Nested HTML Support:** Processes complex HTML structures.
+- **React Integration:** Includes a dedicated React component for effortless use.
+- **TypeScript-Ready:** Fully typed with generated declaration files.
 
 ## Installation
 
-Install via npm:
+Install HTML Typer and its dependencies (only TypeScript and DomPurify) using npm:
 
-~~~bash
-npm install animate-html-rendering dompurify
-~~~
+```bash
+npm install html-typer
+```
+
+If you're using React, ensure you have React installed in your project.
 
 ## Usage
 
-### JavaScript
+### Vanilla JavaScript/TypeScript
 
-~~~js
-import { animateHtmlRendering } from 'animate-html-rendering';
+```typescript
+import { animateHtmlRendering } from 'html-typer';
 
 const container = document.getElementById('myContainer');
-const html = `<p class="intro">Hello, <strong>World!</strong></p>`;
+const htmlContent = `<p>Hello, <strong>World!</strong></p>`;
 
-animateHtmlRendering(container, html, 50).then(() => {
+animateHtmlRendering(container, htmlContent, 50).then(() => {
   console.log('Animation complete!');
 });
-~~~
+```
 
-### TypeScript
+### React
 
-~~~ts
-import { animateHtmlRendering } from 'animate-html-rendering';
+Please keep in mind, React was an after thought. This is a very basic wrapper on the JS functionality.
 
-const container = document.getElementById('myContainer') as HTMLElement;
-const html = `<p class="intro">Hello, <strong>World!</strong></p>`;
+```tsx
+import React from 'react';
+import { HTMLTyper } from 'html-typer/react';
 
-await animateHtmlRendering(container, html, 50);
-~~~
+function App() {
+  return (
+    <div>
+      <HTMLTyper html="<p>Hello, <strong>World!</strong></p>" speed={50} />
+    </div>
+  );
+}
 
-## Running Tests
+export default App;
+```
 
-This project uses Jest for testing. To run tests, use:
+### Testing
 
-~~~bash
-npm test
-~~~
+This project uses Jest and React Testing Library. To run tests:
 
-*(Note: The tests simulate DOM interactions with jsdom and use fake timers to control the animation speed.)*
-
-## Contributing
-
-Contributions are welcome! Feel free to open issues, fork the repository, and submit pull requests.
+```bash
+npm run test
+```
 
 ## License
 
-This project is licensed under the MIT License.
+This project is licen.sed under the MIT License.
