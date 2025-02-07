@@ -1,6 +1,6 @@
 {
   "name": "@goodpie/html-typer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Types out HTML into a view, supporting vanilla JS and React",
   "publishConfig": {
     "access": "public"
