@@ -15,7 +15,7 @@
 Install HTML Typer and its dependencies (only TypeScript and DomPurify) using npm:
 
 ```bash
-npm install html-typer
+npm install @goodpie/html-typer
 ```
 
 If you're using React, ensure you have React installed in your project.
